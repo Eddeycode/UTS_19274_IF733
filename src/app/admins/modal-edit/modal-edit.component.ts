@@ -50,7 +50,6 @@ export class ModalEditComponent implements OnInit {
     });
   }
   onSubmit(form: FormGroup) {
-    this.adminsService.editAdmin(this.form, this.id);
   }
 
   onCancel() {

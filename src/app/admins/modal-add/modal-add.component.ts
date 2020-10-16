@@ -39,7 +39,6 @@ export class ModalAddComponent implements OnInit {
     if (!form.valid) {
       return;
     }
-    this.adminsService.addAdmin(form);
   }
 
   async presentLoading() {
