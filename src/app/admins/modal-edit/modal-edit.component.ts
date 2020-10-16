@@ -8,8 +8,8 @@ import {
 } from "@ionic/angular";
 import { AdminDetailPageModule } from "../admin-detail/admin-detail.module";
 import { AdminDetailPage } from "../admin-detail/admin-detail.page";
-import { Admin } from "../admin.model";
 import { AdminsService } from "../admins.service";
+import { Admin } from '../model/admin.model';
 
 @Component({
   selector: "app-modal-edit",
