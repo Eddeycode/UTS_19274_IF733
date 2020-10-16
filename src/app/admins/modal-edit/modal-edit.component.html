@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onCancel()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <ion-item>
+      <ion-label position="stacked">Nama</ion-label>
+      <ion-input type="text" formControlName="merek"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Model</ion-label>
+      <ion-input type="text" formControlName="model"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Harga</ion-label>
+      <ion-input type="number" formControlName="harga">Rp. </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Stock</ion-label>
+      <ion-input type="number" formControlName="stock"></ion-input>
+    </ion-item>
+    <ion-button (click)="onSave()" type="submit">Edit Contact</ion-button>
+  </form>
+</ion-content>

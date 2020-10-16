@@ -3,7 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button menu="sideMenu"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Home</ion-title>
+    <ion-title>Admins</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentModal()">
+        <ion-icon name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -23,6 +28,16 @@
               <ion-label>Tersedia: {{ admin.stock }}</ion-label>
               </ion-list>
             </ion-item>
+            <ion-item-options side="start">
+              <ion-item-option (click)="presentModal()">
+                <ion-icon name ="create-outline" slot="icon-only"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
+            <ion-item-options side="end">
+              <ion-item-option (click)="presentAlert(admin.id)">
+                <ion-icon name="trash" slot="icon-only"></ion-icon>
+              </ion-item-option>
+            </ion-item-options>
           </ion-item-sliding>
         </ion-list>
       </ion-col>

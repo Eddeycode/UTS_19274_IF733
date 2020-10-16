@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{loadedAdmin.nama}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="loadedAdmin.imageUrl"></ion-img>
+    <ion-item *ngIf="loadedAdmin.type === 'CPU'">
+      <ion-list>
+        <ion-label>Merek: {{loadedAdmin.merek}}</ion-label>
+        <ion-label>Model: {{loadedAdmin.model}}</ion-label>
+        <ion-label>Harga: {{loadedAdmin.harga}}</ion-label>
+        <ion-label>Stock: {{loadedAdmin.stock}}</ion-label>
+        <ion-label>Base clock: {{loadedAdmin.baseClock}}</ion-label>
+        <ion-label>Boost clock: {{loadedAdmin.boostClock}}</ion-label>
+        <ion-label>Core: {{loadedAdmin.core}}</ion-label>
+        <ion-label>Thread: {{loadedAdmin.thread}}</ion-label>
+     </ion-list>
+    </ion-item>
+    <ion-item *ngIf="loadedAdmin.type === 'RAM'">
+      <ion-list>
+        <ion-label>Merek: {{loadedAdmin.merek}}</ion-label>
+        <ion-label>Model: {{loadedAdmin.model}}</ion-label>
+        <ion-label>Speed: {{loadedAdmin.speed}}</ion-label>
+        <ion-label>Ukuran: {{loadedAdmin.size}}</ion-label>
+        <ion-label>Harga: {{loadedAdmin.harga}}</ion-label>
+        <ion-label>Stock: {{loadedAdmin.stock}}</ion-label>
+     </ion-list>
+     </ion-item>
+     <ion-item *ngIf="loadedAdmin.type === 'MOBO'">
+      <ion-list>
+        <ion-label>Merek: {{loadedAdmin.merek}}</ion-label>
+        <ion-label>Model: {{loadedAdmin.model}}</ion-label>
+        <ion-label>Chipset: {{loadedAdmin.chipset}}</ion-label>
+        <ion-label>Processor Merek: {{loadedAdmin.proMerk}}</ion-label>
+        <ion-label>Harga: {{loadedAdmin.harga}}</ion-label>
+        <ion-label>Stock: {{loadedAdmin.stock}}</ion-label>
+     </ion-list>
+     </ion-item><ion-item *ngIf="loadedAdmin.type === 'GPU'">
+      <ion-list>
+        <ion-label>Merek: {{loadedAdmin.merek}}</ion-label>
+        <ion-label>Model: {{loadedAdmin.model}}</ion-label>
+        <ion-label>Harga: {{loadedAdmin.harga}}</ion-label>
+        <ion-label>Stock: {{loadedAdmin.stock}}</ion-label>
+     </ion-list>
+     </ion-item>
+</ion-content>

@@ -5,16 +5,18 @@ import {
   ModalController,
   ToastController,
 } from "@ionic/angular";
-import { AdminsService } from '../admins/admins.service';
-import { ModalAddComponent } from '../admins/modal-add/modal-add.component';
-import { Admin } from '../admins/model/admin.model';
 
+import { ModalAddComponent } from "./modal-add/modal-add.component";
+
+import { AdminsService } from "./admins.service";
+import { Admin } from "./model/admin.model";
+import { ModalEditComponent } from "./modal-edit/modal-edit.component";
 @Component({
-  selector: "app-home",
-  templateUrl: "./home.page.html",
-  styleUrls: ["./home.page.scss"],
+  selector: "app-admins",
+  templateUrl: "./admins.page.html",
+  styleUrls: ["./admins.page.scss"],
 })
-export class HomePage implements OnInit {
+export class AdminsPage implements OnInit {
   admins: Admin[];
   constructor(
     private adminsService: AdminsService,
